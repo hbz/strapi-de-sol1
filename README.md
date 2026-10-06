@@ -70,7 +70,7 @@ The current config dump is checked into the repo as `config.json`. *Caution:* cr
 
 When running the restore command you can choose from different strategies: replace (default), merge, keep.
 
-Read more in the [Strapi docs](https://docs.strapi.io/dev-docs/cli#strapi-configurationdump).
+Read more in the [Strapi v4 docs](https://docs-v4.strapi.io/dev-docs/cli#strapi-configurationdump).
 
 ### Database
 
