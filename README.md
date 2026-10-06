@@ -61,6 +61,10 @@ It can be dumped to a file inside the container and copied to the local repo wit
     docker compose exec strapi-de-sol1 strapi config:dump -f config.json
     docker compose cp strapi-de-sol1:./opt/app/config.json .
 
+In order to better track changes in the config also create a readable version and commit it to the repo:
+
+    jq 'map(if .type == "object" then .value |= fromjson else . end)' config.json > config_readable.json
+
 Reverse for restoring from the file:
 
     docker compose cp config.json strapi-de-sol1:./opt/app/
